@@ -20,6 +20,15 @@ Write a function `filter` that takes an array and a predicate callback function:
 
 ```js
 function filter(arr, predicate) {
+    let newArray = [];
+    for (let i=0; i < arr.length; i++ ) {
+        const item = arr[i];
+        if(predicate(item)) {
+            newArray[i] = item;
+        }
+    }
+    return newArray;
+}
 ```
 
 > **You can assume valid inputs**
