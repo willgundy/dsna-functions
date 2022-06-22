@@ -75,3 +75,24 @@ console.log(addUnsure('Hello World'));
 // Hello World?!?
 console.log(addUnsure('Pokemon, catch em all'));
 // Pokemon, catch em all?!?
+
+
+//exercise 6 addFirstElement
+function addFirstElement(element) {
+  return( (array) => {
+    array.unshift(element);
+    return array;
+  } );
+}
+
+const addOrange = addFirstElement('orange');
+console.log(addOrange(['red', 'blue', 'green']));
+// [orange,red,blue,green]
+console.log(addOrange(['blue', 'blue', 'blue']));
+// [orange,blue,blue,blue]
+
+const addCat = addFirstElement('cat');
+console.log(addCat(['dog', 'bird', 'lizard']));
+// [cat,dog,bird,lizard]
+console.log(addCat(['lizard', 'donkey', 'whale']));
+// [cat,lizard,donkey,whale]
