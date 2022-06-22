@@ -26,3 +26,19 @@ function filter(arr, predicate) {
 
 console.log(filter([2, 6, 5], n => n % 2 === 0));
 //[2, 6]
+
+//exercise 3 every
+function every(arr, predicate) {
+  for(let i = 0; i < arr.length; i++) {
+    const item = arr[i];
+    if (!predicate(item)) {
+      return false;
+      break;
+    }
+  }
+  return true;
+}
+console.log(every([2, 4, 6], n => n % 2 === 0));
+//true
+console.log(every([1, 2, 3], n => n % 2 === 0));
+//false
