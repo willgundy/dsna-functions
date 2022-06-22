@@ -7,6 +7,12 @@ Write a function that finds the sum of the first n natural numbers. **Make your 
 
 ```js
 function sum(n) {
+    let sumArray = [];
+    for (let i = 1, i >= n, i++ ) {
+        sumArray.push(i);
+    }
+    return sumArray.reduce((acc, int) => acc + int, 0);
+}
 ```
 
 > **You can assume valid inputs**

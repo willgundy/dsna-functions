@@ -8,7 +8,14 @@ Create a function that takes a number and returns one digit that is the result o
 **Make your function recursive**.
 
 ```js
-function rootDigit(n) {
+function rootDigit(num) {
+    const digits = num.toString().split('');
+    const sum = digits.map(int => +int).reduce((a,b) => a+b);
+    if (sum >= 10) {
+        rootDigit(sum);
+    }
+    return sum;
+}
 ```
 
 > **You can assume valid inputs**
