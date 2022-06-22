@@ -28,6 +28,9 @@ Write a function named fib that takes an integer `n` as its input. It should ret
 
 ```js
 function fib(n) {
+  if(n<=1) return n;
+  return fib(n-2) + fib(n-1);
+}
 ```
 
 > **You can assume valid inputs**
