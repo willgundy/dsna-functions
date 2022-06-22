@@ -6,6 +6,14 @@ DEMO: Add First Element
 Write a function `addFirst` that takes a parameter `element` and returns a function that takes an array and returns a _new_ array with `element` as the first element plus all the elements of the passed array.
 
 > **You can assume valid inputs**
+``` js
+function addFirstElement(element) {
+  return( (array) => {
+    array.unshift(element);
+    return array;
+  } );
+}
+```
 
 ## Test Cases
 
