@@ -59,3 +59,19 @@ console.log(some([1, 6, 5], n => n % 2 === 0));
 //true
 console.log(some([1, 7, 3], n => n % 2 === 0));
 //false
+
+//exercise 5 addPunctuation
+function addPunctuation(punctuation) {
+  return( (str) => {return str + punctuation} );
+}
+
+const addExcitement = addPunctuation('!!!');
+console.log(addExcitement('Hello World'));
+// Hello World!!!
+console.log(addExcitement('Pokemon, catch em all'));
+// Pokemon, catch em all!!!
+const addUnsure = addPunctuation('?!?');
+console.log(addUnsure('Hello World'));
+// Hello World?!?
+console.log(addUnsure('Pokemon, catch em all'));
+// Pokemon, catch em all?!?
